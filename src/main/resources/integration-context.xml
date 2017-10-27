@@ -7,7 +7,7 @@
 			http://www.springframework.org/schema/integration
 			http://www.springframework.org/schema/integration/spring-integration.xsd">
 
-	<gateway id="voidGateway" 
+	<gateway id="stringGateway"
 		default-request-channel="inputChannel"
 			 default-reply-channel="replyChannel"
 			 default-reply-timeout="60000"
@@ -20,9 +20,7 @@
 	<channel id="errorChannel"/>
 	<channel id="replyChannel" />
 	
-	<chain input-channel="inputChannel"  output-channel="replyChannel">
-		<transformer  expression="1/0"/>
-	</chain>
+	<transformer  expression="1/0" input-channel="inputChannel"  output-channel="replyChannel"/>
 
 	<transformer input-channel="errorChannel" ref="logErrorHandler" />
 
