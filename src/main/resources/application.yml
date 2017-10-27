@@ -3,9 +3,13 @@ logging:
   level:
     ROOT: INFO
     org.springframework.integration: DEBUG
+    org.springframework.cloud.sleuth: DEBUG
 spring:
   application:
     name: demo
+#  sleuth:
+#    integration:
+#      enabled: false
 security:
   basic:
     enabled: false

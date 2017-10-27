@@ -10,13 +10,12 @@
 	<gateway id="stringGateway"
 		default-request-channel="inputChannel"
 			 default-reply-channel="replyChannel"
-			 default-reply-timeout="60000"
+			 default-reply-timeout="1000"
 		error-channel="errorChannel"
 		service-interface="com.example.demo.StringGateway">
 	</gateway>
 	
 	<channel id="inputChannel"/>
-	
 	<channel id="errorChannel"/>
 	<channel id="replyChannel" />
 	
