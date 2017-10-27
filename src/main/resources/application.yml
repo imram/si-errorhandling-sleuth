@@ -1,0 +1,11 @@
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.integration: DEBUG
+spring:
+  application:
+    name: demo
+security:
+  basic:
+    enabled: false
